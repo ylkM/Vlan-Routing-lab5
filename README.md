@@ -46,8 +46,7 @@ vlan-routing-lab/
     └── ping-tests.md             ← connectivity + broadcast ping test plan (Task 4)
 ```
 
-## Design assumptions (stated explicitly, since exact port numbers weren't fully
-legible in the original diagram beyond G0/0, G0/1, Gig0/2 on R1 and G1/1 on SW1):
+
 
 | Link | R1 side | SW1 side | Carries |
 |---|---|---|---|
