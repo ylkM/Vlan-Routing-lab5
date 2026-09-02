@@ -1,0 +1,42 @@
+! ============================================
+! R1 Configuration
+! One routed interface per VLAN (no subinterfaces)
+! ============================================
+
+enable
+configure terminal
+
+hostname R1
+
+! --- Engineering (VLAN 10) gateway ---
+interface GigabitEthernet0/0
+ description Link to SW1 Fa1/1 -- VLAN10 Engineering Gateway
+ ip address 10.0.0.62 255.255.255.192
+ no shutdown
+ exit
+
+! --- HR (VLAN 20) gateway ---
+interface GigabitEthernet0/1
+ description Link to SW1 Fa2/1 -- VLAN20 HR Gateway
+ ip address 10.0.0.126 255.255.255.192
+ no shutdown
+ exit
+
+! --- Sales (VLAN 30) gateway ---
+interface GigabitEthernet0/2
+ description Link to SW1 G1/1 -- VLAN30 Sales Gateway
+ ip address 10.0.0.190 255.255.255.192
+ no shutdown
+ exit
+
+! No routing protocol needed -- all 3 subnets are directly connected on R1,
+! so R1 already knows how to route between VLAN10 / VLAN20 / VLAN30.
+
+end
+write memory
+
+! ============================================
+! Verification commands
+! ============================================
+! show ip interface brief
+! show ip route
