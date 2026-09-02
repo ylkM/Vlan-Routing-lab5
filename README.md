@@ -1,4 +1,4 @@
-# VLAN Routing Lab — 3 VLANs, 1 Router, 1 Switch (Packet Tracer)
+# VLAN Routing Lab  VLANs, 1 Router, 1 Switch (Packet Tracer)
 
 This repo documents a Cisco Packet Tracer lab: a router (**R1**) connected to a switch (**SW1**)
 with three VLANs (Engineering, HR, Sales), each on its own /26 subnet, each PC statically
