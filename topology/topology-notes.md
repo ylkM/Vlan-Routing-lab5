@@ -1,5 +1,7 @@
 # Port-by-Port Connection Map
 
+![VLAN Topology Diagram](topology-diagram.png)
+
 ## SW1 access ports → end devices
 
 | SW1 Port | Connected to | VLAN |
